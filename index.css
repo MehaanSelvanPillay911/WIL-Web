@@ -1,0 +1,82 @@
+/* Escape Rooms SA — app-matching neon theme */
+
+:root {
+  --bg:#07090D; --panel:#062332; --input:#07151F;
+  --green:#00FF39; --green2:#17F000; --purple:#9C00FF;
+  --pink:#FF168C; --red:#FF3045; --white:#FFF;
+  --text:#D8E1EF; --muted:#94A3B8; --quiet:#52627D;
+  --border:#162E5A; --border2:#263B62;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; min-height:100vh; color:var(--text);
+  background:radial-gradient(ellipse at 12% 0%,rgba(124,0,255,.13),transparent 34rem),
+  radial-gradient(ellipse at 90% 18%,rgba(0,255,57,.07),transparent 30rem),var(--bg);
+  font-family:Arial,Helvetica,sans-serif; line-height:1.7;
+}
+.main-nav{
+  display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px;
+  padding:17px 20px;background:rgba(7,9,13,.97);
+  border-bottom:1px solid var(--border);box-shadow:0 5px 24px #0008;
+}
+.main-nav a{
+  color:var(--muted);text-decoration:none;font-size:.82rem;font-weight:800;
+  letter-spacing:1.2px;padding:11px 17px;border:1px solid transparent;
+  border-radius:8px;transition:.2s;
+}
+.main-nav a:hover,.main-nav a:focus-visible,.main-nav a.active{
+  color:var(--green);border-color:#00FF3980;background:#00FF3910;outline:none;
+}
+.main-nav a.active{box-shadow:0 0 14px #00FF391a}
+.page-header{
+  text-align:center;padding:58px 22px 48px;
+  background:linear-gradient(135deg,rgba(6,35,50,.98),rgba(7,9,13,.96));
+  border-bottom:2px solid var(--purple);box-shadow:0 7px 25px #7c00ff1f;
+}
+.page-header h1{
+  color:var(--white);font-size:clamp(2rem,5vw,3.25rem);
+  line-height:1.15;margin:0;font-weight:900;letter-spacing:-1px;
+}
+.page-header h1:after{
+  content:"";display:block;width:76px;height:4px;margin:19px auto 0;
+  border-radius:4px;background:var(--green);box-shadow:0 0 13px #00FF39b3;
+}
+.page-header p{max-width:680px;margin:18px auto 0;color:var(--muted)}
+.main-content{width:min(100% - 40px,1000px);margin:42px auto 64px}
+.content-section,.room-section,.intro-section,.form-section,.contact-details{
+  position:relative;margin:0 0 25px;padding:27px 30px;
+  background:linear-gradient(145deg,rgba(6,35,50,.96),rgba(7,21,31,.96));
+  border:1px solid var(--border);border-radius:15px;
+  box-shadow:0 12px 30px #0004;
+}
+.content-section:before,.room-section:before,.form-section:before,.contact-details:before{
+  content:"";position:absolute;top:0;left:25px;width:58px;height:3px;
+  background:var(--green);border-radius:0 0 5px 5px;box-shadow:0 0 11px #00FF398c;
+}
+h2{color:var(--white);font-size:1.45rem;line-height:1.3;margin:0 0 15px;font-weight:850}
+h2:first-letter{color:var(--green)}
+h3{color:var(--green);font-size:1.08rem;margin:22px 0 7px;font-weight:800}
+p{margin:0 0 14px;color:var(--text)}
+p:last-child{margin-bottom:0}
+ul,ol{color:var(--text);padding-left:24px;margin-bottom:0}
+li{padding:4px 0 4px 5px}
+li::marker{color:var(--green);font-weight:800}
+.footer{
+  text-align:center;padding:25px 20px;background:#05070A;
+  border-top:1px solid var(--border);color:var(--quiet);font-size:.88rem;
+}
+.footer p{color:var(--quiet);margin:3px 0}
+@media(max-width:620px){
+  .main-nav{gap:4px;padding:12px 8px}
+  .main-nav a{padding:9px 10px;font-size:.72rem;letter-spacing:.6px}
+  .page-header{padding:42px 17px 36px}
+  .main-content{width:min(100% - 26px,1000px);margin:25px auto 45px}
+  .content-section,.room-section,.intro-section,.form-section,.contact-details{padding:23px 20px;border-radius:12px}
+  h2{font-size:1.25rem}
+}
+
+
+.home-page #welcome{border-left:3px solid var(--green)}
+.home-page #explore{border-left:3px solid var(--purple)}
+.home-page #explore:before{background:var(--purple);box-shadow:0 0 11px #9C00FFa6}
